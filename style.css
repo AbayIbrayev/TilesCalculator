@@ -142,30 +142,6 @@ main {
   color: #2f2fa2;
 }
 
-/* button */
-
-.button-o {
-  padding: 20px 30px;
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-  border: 2px solid #fff;
-  color: #fff;
-  background-color: transparent;
-  text-decoration: none;
-  -webkit-transition: background-color 0.3s ease-out, color 0.3s ease-out;
-  transition: background-color 0.3s ease-out, color 0.3s ease-out;
-}
-
-.button-o:hover {
-  background-color: #fff;
-}
-
-.button-o:active {
-  -webkit-transform: translateY(2px);
-  transform: translateY(2px);
-}
-
 @media only screen and (max-width: 768px) {
   .tiles__block {
     flex-wrap: wrap;
