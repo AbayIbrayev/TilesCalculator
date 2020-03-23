@@ -10,6 +10,38 @@
 
 <body>
 
+  <main>
+    <section class="tiles">
+      <div class="tiles__inner">
+        <h2 class="tiles__title">Tile Calculator</h2>
+        <div class="tiles__block">
+          <div class="tiles__text">
+            <h3 class="tiles__subtitle">Tiles Amount</h3>
+            <div class="tiles__inputs">
+              <input type="num" placeholder="Tiles (&#13217;)" class="tiles__input">
+            </div>
+          </div>
+          <div class="tiles__text">
+            <h3 class="tiles__subtitle">Area Length</h3>
+            <div class="tiles__inputs">
+              <input type="num" id="width" placeholder="Width (m)" class="tiles__input">
+              <span class="tiles__separator">X</span>
+              <input type="num" id="length" placeholder="Length (m)" class="tiles__input">
+            </div>
+          </div>
+        </div>
+        <div class="tiles__checkbox">
+          <label for="tiles-checkbox" class="checkbox-label">
+            Add 10% for cuts and wastage
+            <input type="checkbox" name="tiles-checkbox" id="tiles-checkbox" class="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <button class="button-o tiles__btn">Calculate</button>
+      </div>
+      </div>
+    </section>
+  </main>
 
   <script src="main.js"></script>
 </body>

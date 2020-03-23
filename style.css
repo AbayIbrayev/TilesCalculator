@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+}
+
+.tiles {
+  background-color: #00b1cd;
+  width: 70%;
+  margin: 40px auto;
+  max-width: 600px;
+  box-shadow: 3px 5px 43px 5px #cecdcd, 0 2px 7px 0 #adadad;
+  border-radius: 9px;
+  padding: 40px 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.tiles__title {
+  margin-bottom: 30px;
+}
+
+.tiles__subtitle {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.tiles__inputs {
+  margin-bottom: 20px;
+}
+
+.tiles__block {
+  display: flex;
+}
+
+.tiles__text {
+  flex-basis: 50%;
+}
+
+.tiles__input {
+  padding: 15px 10px;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.05);
+  border: none;
+  width: 100px;
+}
+
+.tiles__separator {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.tiles__btn {
+  margin-top: 20px;
+}
+
+.tiles__btn:hover {
+  color: #00b1cd;
+}
+
+.tiles__checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tiles__checkbox span {
+  margin-right: 10px;
+}
+
+/* custom checkbox */
+
+.checkbox-label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  transition: background 0.3s;
+}
+
+.checkbox:checked ~ .checkmark {
+  background-color: #ffffff;
+}
+
+.checkbox:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkmark:after {
+  content: "\2714";
+  font-size: 20px;
+  margin-top: -4px;
+  text-align: center;
+  display: none;
+  color: #00b1cd;
+}
+
+/* button */
+
+.button-o {
+  padding: 20px 30px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  text-decoration: none;
+  -webkit-transition: background-color 0.3s ease-out, color 0.3s ease-out;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.button-o:hover {
+  background-color: #fff;
+}
+
+.button-o:active {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+}
