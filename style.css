@@ -53,6 +53,12 @@ main {
   font-size: 14px;
   opacity: 0.9;
   padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+#tiles-surface {
+  opacity: 1;
+  font-size: 16px;
 }
 
 .tiles__input {
@@ -68,7 +74,7 @@ main {
 }
 
 .tiles__btn {
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .tiles__btn:hover {

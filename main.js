@@ -1,29 +1,25 @@
-function calcSurface(w, h) {
-  var result = parseFloat(w) * parseFloat(h);
-  return result;
+let tilesAmount = document.querySelector('#tilesA'),
+  tilesW = document.querySelector('#tilesW'),
+  tilesL = document.querySelector('#tilesL'),
+  tilesBtn = document.querySelector('.tiles__btn'),
+  tilesCheckbox = document.querySelector('#tiles-checkbox'),
+  tilesSurface = document.querySelector('#tiles-surface');
+
+function calcTilesSurface() {
+  tilesSurface.innerHTML = '';
+  if (tilesAmount.value != '' && tilesW.value != '' && tilesL.value != '' && tilesAmount.value > 0 && tilesW.value > 0 && tilesL.value > 0) {
+    let tilesArea = parseFloat(tilesW.value) * parseFloat(tilesL.value);
+    let result;
+    if (tilesCheckbox.checked == false) {
+      result = parseFloat(tilesAmount.value) * tilesArea;
+    } else {
+      tilesArea = tilesArea + tilesArea * 0.1;
+      result = parseFloat(tilesAmount.value) * tilesArea;
+    }
+    tilesSurface.innerHTML = `You will need <strong>${result.toFixed(2)} &#13217;</strong> of tiles`;
+  } else if (tilesAmount.value == 0 || tilesW.value == 0 || tilesL.value == 0) {
+    tilesSurface.innerText = 'Change the provided details!';
+  } else {
+    tilesSurface.innerText = 'All the inputs must be filled!';
+  }
 }
-
-var tileW = document.querySelector('#tileSize>#width');
-var tileH = document.querySelector('#tileSize>#height');
-var tileSurface = document.querySelector('#tileSize>#tileSurface');
-
-tileH.addEventListener('change', function () {
-  var tSurface = calcSurface(tileW.value, tileH.value);
-  tileSurface.value = tSurface + ' cm2';
-  //tileW.value = '';
-  //tileH.value = '';
-});
-
-var floorW = document.querySelector('#floorSize>#width');
-var floorH = document.querySelector('#floorSize>#height');
-var floorSurface = document.querySelector('#floorSize>#floorSurface');
-
-floorH.addEventListener('change', function () {
-  var fSurface = calcSurface(floorW.value, floorH.value);
-  floorSurface.value = fSurface + ' m2';
-  //tileW.value = '';
-  //tileH.value = '';
-  var calculationDiv = document.querySelector('#calculation');
-  var calculation = (parseFloat(floorSurface.value) * 10000) / parseFloat(tileSurface.value);
-  calculationDiv.innerHTML = 'You will need to buy <b>' + (parseInt(calculation)) + ' tiles</b> (' + parseFloat(calculation) + ')' + ' to cover your floor';
-});
