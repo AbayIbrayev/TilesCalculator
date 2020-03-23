@@ -17,7 +17,7 @@ main {
 }
 
 .tiles {
-  background-color: #00b1cd;
+  background-color: #2f2fa2;
   width: 70%;
   margin: 40px auto;
   max-width: 600px;
@@ -78,7 +78,7 @@ main {
 }
 
 .tiles__btn:hover {
-  color: #00b1cd;
+  color: #2f2fa2;
 }
 
 .tiles__checkbox {
@@ -139,7 +139,7 @@ main {
   margin-top: -4px;
   text-align: center;
   display: none;
-  color: #00b1cd;
+  color: #2f2fa2;
 }
 
 /* button */

@@ -22,7 +22,7 @@ function calcTilesSurface() {
     if (tilesCheckbox.checked == true) {
       tilesArea = tilesArea + tilesArea * 0.1;
     }
-    result = tilesArea / (parseFloat(tileHeight.value) * parseFloat(tileWidth.value));
+    result = tilesArea / (parseFloat(tileHeight.value) * parseFloat(tileWidth.value) / 10000);
     tilesSurface.innerHTML = `You will need <strong>${result.toFixed(2)}(${Math.round(result)})</strong> tiles or <strong>${tilesArea.toFixed(2)}(${Math.round(tilesArea)})&#13217;</strong>`;
   } else {
     tilesSurface.innerText = 'Change the provided details!';
