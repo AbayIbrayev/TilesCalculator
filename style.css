@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Muli", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,6 +68,7 @@ main {
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.05);
   border: none;
   width: 90px;
+  border-radius: 6px;
 }
 
 .tiles__separator {
